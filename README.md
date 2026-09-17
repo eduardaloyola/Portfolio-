@@ -1,6 +1,6 @@
 # Eduarda Loyola | Portfólio
 
-Portfólio pessoal com visual em tema natureza, focado em apresentar minha trajetória, habilidades, experiências e projetos como desenvolvedora.
+Portfólio pessoal, focado em apresentar minha trajetória, habilidades, experiências e projetos como desenvolvedora.
 
 ## Visão geral
 
