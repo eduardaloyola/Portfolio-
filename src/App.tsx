@@ -165,6 +165,7 @@ export default function App() {
   const [activeGroup, setActiveGroup] = useState('frontend')
   const [scrolled, setScrolled] = useState(false)
   const [natureSoundOn, setNatureSoundOn] = useState(true)
+  const natureAudioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -172,21 +173,25 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    const audio = natureAudioRef.current
+    if (!audio) return
+
+    if (natureSoundOn) {
+      audio.play().catch(() => {})
+    } else {
+      audio.pause()
+    }
+  }, [natureSoundOn])
+
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   const active = skillGroups.find(g => g.id === activeGroup)!
-  const natureSoundUrl = 'https://www.youtube.com/embed/29XymHesxa0?autoplay=1&loop=1&playlist=29XymHesxa0&controls=0&rel=0'
+  const natureSoundUrl = `${import.meta.env.BASE_URL}soundreality-birds-forest-nature-445379.mp3`
 
   return (
     <div style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', minHeight: '100vh' }}>
 
-      {natureSoundOn && (
-        <iframe
-          title="Som de natureza"
-          src={natureSoundUrl}
-          allow="autoplay"
-          style={{ position: 'fixed', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none' }}
-        />
-      )}
+      <audio ref={natureAudioRef} src={natureSoundUrl} autoPlay loop preload="auto" />
 
       {/* NAV */}
       <nav
