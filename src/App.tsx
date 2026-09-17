@@ -261,7 +261,7 @@ export default function App() {
           >
             Desenvolvedora full stack graduanda em Ciência e Tecnologia pela UFBA.
             Construtora de interfaces, scripts e sistemas — com ~2 anos de código na mochila.
-            Fora da tela: natureza, trilhas e ar livre.
+            Fora da tela: natureza e games. 
           </p>
 
           <div className="flex gap-4 flex-wrap">
@@ -333,7 +333,7 @@ export default function App() {
                 Com ~2 anos de prática, já passei por ambiente corporativo, extensão universitária e projetos próprios.
               </p>
               <p style={{ color: 'var(--color-muted-foreground)', lineHeight: '1.85' }}>
-                Quando não estou no terminal, estou em alguma trilha. Natureza e código têm mais em comum do que parece: os dois exigem atenção, paciência e respeito pelo processo.
+                Quando não estou no terminal, gosto de jogar ou sair para a natureza. Natureza e código têm mais em comum do que parece: os dois exigem atenção, paciência e respeito pelo processo.
               </p>
             </div>
 
