@@ -173,8 +173,15 @@ export default function App() {
       setScrolled(window.scrollY > 60)
       if (window.scrollY > 0 && !natureSoundDisabledRef.current) playNatureSound()
     }
+    const onWheel = () => {
+      if (!natureSoundDisabledRef.current) playNatureSound()
+    }
     window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    window.addEventListener('wheel', onWheel, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('wheel', onWheel)
+    }
   }, [])
 
   useEffect(() => {
