@@ -164,6 +164,7 @@ function TypewriterText({ text, delay = 0 }: { text: string; delay?: number }) {
 export default function App() {
   const [activeGroup, setActiveGroup] = useState('frontend')
   const [scrolled, setScrolled] = useState(false)
+  const [natureSoundOn, setNatureSoundOn] = useState(true)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -173,9 +174,19 @@ export default function App() {
 
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   const active = skillGroups.find(g => g.id === activeGroup)!
+  const natureSoundUrl = 'https://www.youtube.com/embed/29XymHesxa0?autoplay=1&loop=1&playlist=29XymHesxa0&controls=0&rel=0'
 
   return (
     <div style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', minHeight: '100vh' }}>
+
+      {natureSoundOn && (
+        <iframe
+          title="Som de natureza"
+          src={natureSoundUrl}
+          allow="autoplay"
+          style={{ position: 'fixed', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none' }}
+        />
+      )}
 
       {/* NAV */}
       <nav
@@ -614,6 +625,21 @@ export default function App() {
           </span>
         </div>
       </footer>
+
+      <button
+        type="button"
+        aria-pressed={natureSoundOn}
+        onClick={() => setNatureSoundOn(current => !current)}
+        className="fixed bottom-5 right-5 z-50 px-4 py-2 text-xs transition-colors"
+        style={{
+          backgroundColor: natureSoundOn ? 'var(--color-primary)' : 'var(--color-card)',
+          color: natureSoundOn ? 'var(--color-primary-foreground)' : 'var(--color-muted-foreground)',
+          border: '1px solid var(--color-border)',
+          fontFamily: 'var(--font-mono)',
+        }}
+      >
+        {natureSoundOn ? '♪ natureza: on' : '♪ natureza: off'}
+      </button>
 
     </div>
   )
