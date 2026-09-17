@@ -178,7 +178,7 @@ export default function App() {
     if (!audio) return
 
     if (natureSoundOn) {
-      audio.play().catch(() => {})
+      audio.play().catch(() => setNatureSoundOn(false))
     } else {
       audio.pause()
     }
@@ -187,6 +187,17 @@ export default function App() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   const active = skillGroups.find(g => g.id === activeGroup)!
   const natureSoundUrl = `${import.meta.env.BASE_URL}soundreality-birds-forest-nature-445379.mp3`
+  const toggleNatureSound = () => {
+    const audio = natureAudioRef.current
+    if (!audio) return
+
+    if (audio.paused) {
+      audio.play().then(() => setNatureSoundOn(true)).catch(() => setNatureSoundOn(false))
+    } else {
+      audio.pause()
+      setNatureSoundOn(false)
+    }
+  }
 
   return (
     <div style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', minHeight: '100vh' }}>
@@ -634,7 +645,7 @@ export default function App() {
       <button
         type="button"
         aria-pressed={natureSoundOn}
-        onClick={() => setNatureSoundOn(current => !current)}
+        onClick={toggleNatureSound}
         className="fixed bottom-5 right-5 z-50 px-4 py-2 text-xs transition-colors"
         style={{
           backgroundColor: natureSoundOn ? 'var(--color-primary)' : 'var(--color-card)',
