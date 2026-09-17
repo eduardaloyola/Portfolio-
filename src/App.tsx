@@ -58,7 +58,7 @@ const experiences = [
     role: 'Estagiária de Sistemas',
     company: 'FIEB',
     period: 'Jun – Jul 2026',
-    tags: ['JavaScript', 'React', 'Node.js', 'Angular', 'C#', 'PHP'],
+    tags: ['JavaScript', 'React', 'Node.js', 'C#', 'PHP'],
     desc: 'Desenvolvimento e manutenção de sistemas internos. Versionamento em equipe com Git, GitHub e GitLab.',
     temp: true,
   },
