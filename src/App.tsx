@@ -78,6 +78,13 @@ const certs = [
   { title: 'Santander Coders 2024', source: 'ADA Tech', year: '2024' },
 ]
 
+const education = {
+  course: 'Ciência e Tecnologia',
+  institution: 'Universidade Federal da Bahia (UFBA)',
+  period: '2023 – Presente',
+  subjects: ['Hardware', 'Software', 'Lógica de Programação', 'Programação Orientada a Objetos', 'Sistemas Operacionais'],
+}
+
 function PixelGrid() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ opacity: 0.04 }}>
@@ -241,7 +248,7 @@ export default function App() {
             {'>'} eduarda.dev<span className="cursor-blink">_</span>
           </span>
           <div className="flex gap-6 text-xs" style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted-foreground)' }}>
-            {['sobre', 'skills', 'contato'].map(id => (
+            {['sobre', 'skills', 'formacao', 'contato'].map(id => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
@@ -573,6 +580,48 @@ export default function App() {
 
           {/* Certs */}
           <div className="mt-14">
+            <div id="formacao" className="mb-14 scroll-mt-24">
+              <p style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.15em', marginBottom: '16px' }}>
+                // FORMAÇÃO.acadêmica
+              </p>
+              <div
+                className="grid md:grid-cols-[180px_1fr] gap-6 py-6"
+                style={{ borderBottom: '1px solid var(--color-border)' }}
+              >
+                <div>
+                  <div style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.08em', marginBottom: '4px' }}>
+                    {education.period}
+                  </div>
+                  <div style={{ color: 'var(--color-muted-foreground)', fontSize: '0.85rem' }}>{education.institution}</div>
+                </div>
+                <div>
+                  <div className="font-display mb-2" style={{ fontSize: '1.1rem', fontWeight: 400, color: 'var(--color-foreground)' }}>
+                    {education.course}
+                  </div>
+                  <p style={{ color: 'var(--color-muted-foreground)', fontSize: '0.88rem', lineHeight: '1.7', marginBottom: '10px' }}>
+                    Formação interdisciplinar com base em computação, tecnologia e resolução de problemas.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {education.subjects.map(subject => (
+                      <span
+                        key={subject}
+                        style={{
+                          backgroundColor: 'rgba(124,184,66,0.1)',
+                          color: 'var(--color-primary)',
+                          border: '1px solid rgba(124,184,66,0.2)',
+                          padding: '2px 8px',
+                          fontSize: '10px',
+                          fontFamily: 'var(--font-mono)',
+                        }}
+                      >
+                        {subject}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <p style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.15em', marginBottom: '16px' }}>
               // CERTIFICADOS
             </p>

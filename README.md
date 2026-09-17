@@ -2,12 +2,6 @@
 
 Portfólio pessoal com visual em tema natureza, focado em apresentar minha trajetória, habilidades, experiências e projetos como desenvolvedora.
 
-## Visão geral
-
-- Desenvolvedora full stack em formação
-- Graduanda em Ciência e Tecnologia pela UFBA
-- Especialidade em front-end, automação e desenvolvimento web
-- Estilo visual minimalista com identidade inspirada em natureza
 
 ## Tecnologias
 
