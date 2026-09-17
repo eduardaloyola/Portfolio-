@@ -360,7 +360,7 @@ export default function App() {
                 <div>▸ desenvolvimento full stack</div>
                 <div>▸ automação de processos</div>
                 <div>▸ análise de dados</div>
-                <div>▸ trilhas e natureza 🌿</div>
+                <div>▸ natureza 🌿</div>
                 <div>▸ games & worldbuilding</div>
               </div>
               <div style={{ color: 'var(--color-primary)', marginTop: '16px', marginBottom: '8px' }}>
@@ -564,7 +564,7 @@ export default function App() {
               <em style={{ color: 'var(--color-primary)' }}>algo legal?</em>
             </h2>
             <p style={{ color: 'var(--color-muted-foreground)', lineHeight: '1.8', marginBottom: '28px' }}>
-              Aberta a oportunidades, freelas, colaborações e boas conversas sobre código e natureza.
+              Aberta a oportunidades, freelas, colaborações e boas conversas sobre código, games e natureza.
             </p>
 
             <div className="space-y-3">
