@@ -215,7 +215,7 @@ export default function App() {
   return (
     <div style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', minHeight: '100vh' }}>
 
-      <audio ref={natureAudioRef} src={natureSoundUrl} autoPlay loop preload="auto" />
+      <audio ref={natureAudioRef} src={natureSoundUrl} autoPlay loop preload="auto" volume={0.15} />
 
       {/* NAV */}
       <nav
@@ -252,8 +252,6 @@ export default function App() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        <PixelGrid />
-
         {/* Organic blob shapes */}
         <div
           className="absolute top-20 right-0 w-96 h-96 opacity-10 float"
