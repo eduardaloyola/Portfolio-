@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0d1108"/>
+  <path d="M0 520C180 430 270 580 470 500S790 410 1200 500V630H0Z" fill="#182510"/>
+  <circle cx="1010" cy="115" r="210" fill="#7cb842" opacity="0.12"/>
+  <circle cx="1080" cy="160" r="130" fill="#b8e04a" opacity="0.08"/>
+  <text x="92" y="112" fill="#7cb842" font-family="monospace" font-size="22" letter-spacing="4">[PORTFOLIO]</text>
+  <text x="88" y="300" fill="#f1f4e9" font-family="Georgia, serif" font-size="92">Eduarda</text>
+  <text x="88" y="398" fill="#7cb842" font-family="Georgia, serif" font-size="92" font-style="italic">Loyola</text>
+  <text x="94" y="478" fill="#a6ad99" font-family="Arial, sans-serif" font-size="25">Desenvolvedora full stack · UFBA</text>
+  <text x="94" y="550" fill="#7cb842" font-family="monospace" font-size="18">eduardaloyola.github.io/Portfolio-/</text>
+</svg>

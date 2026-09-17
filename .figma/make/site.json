@@ -1,6 +1,9 @@
 {
   "title": "Eduarda Loyola",
-  "description": "Showcases a personalized portfolio blending professional experience with a passion for nature, offering a unique and engaging personal brand.",
+  "description": "Portfólio de Eduarda Loyola, desenvolvedora full stack e graduanda em Ciência e Tecnologia pela UFBA.",
+  "openGraph": {
+    "image": "https://eduardaloyola.github.io/Portfolio-/preview.svg"
+  },
   "robots": {
     "index": false
   },
