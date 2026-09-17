@@ -499,12 +499,12 @@ export default function App() {
                 ))}
               </div>
               <a
-                href="https://github.com/eduardaloyola/Site-para-coletivo-HerData"
+                href="https://eduardaloyola.github.io/Site-para-coletivo-HerData/"
                 target="_blank"
                 rel="noreferrer"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)', fontSize: '13px', textDecoration: 'underline', textUnderlineOffset: '4px' }}
               >
-                github.com/eduardaloyola/Site-para-coletivo-HerData ↗
+                eduardaloyola.github.io/Site-para-coletivo-HerData/ ↗
               </a>
             </div>
           </div>
@@ -665,7 +665,7 @@ export default function App() {
           fontFamily: 'var(--font-mono)',
         }}
       >
-        {natureSoundOn ? '♪ natureza: on' : '♪ natureza: off'}
+        {natureSoundOn ? '♪ som: on' : '♪ som: off'}
       </button>
 
     </div>
