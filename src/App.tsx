@@ -166,9 +166,13 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false)
   const [natureSoundOn, setNatureSoundOn] = useState(true)
   const natureAudioRef = useRef<HTMLAudioElement>(null)
+  const natureSoundDisabledRef = useRef(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 60)
+      if (window.scrollY > 0 && !natureSoundDisabledRef.current) playNatureSound()
+    }
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -187,13 +191,22 @@ export default function App() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   const active = skillGroups.find(g => g.id === activeGroup)!
   const natureSoundUrl = `${import.meta.env.BASE_URL}soundreality-birds-forest-nature-445379.mp3`
+  const playNatureSound = () => {
+    const audio = natureAudioRef.current
+    if (!audio) return
+
+    audio.play().then(() => setNatureSoundOn(true)).catch(() => setNatureSoundOn(false))
+  }
+
   const toggleNatureSound = () => {
     const audio = natureAudioRef.current
     if (!audio) return
 
     if (audio.paused) {
-      audio.play().then(() => setNatureSoundOn(true)).catch(() => setNatureSoundOn(false))
+      natureSoundDisabledRef.current = false
+      playNatureSound()
     } else {
+      natureSoundDisabledRef.current = true
       audio.pause()
       setNatureSoundOn(false)
     }
