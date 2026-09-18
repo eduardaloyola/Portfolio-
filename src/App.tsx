@@ -171,6 +171,7 @@ function TypewriterText({ text, delay = 0 }: { text: string; delay?: number }) {
 export default function App() {
   const [activeGroup, setActiveGroup] = useState('frontend')
   const [scrolled, setScrolled] = useState(false)
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const [natureSoundOn, setNatureSoundOn] = useState(true)
   const natureAudioRef = useRef<HTMLAudioElement>(null)
   const natureSoundDisabledRef = useRef(false)
@@ -251,7 +252,7 @@ export default function App() {
             {['sobre', 'skills', 'formacao', 'contato'].map(id => (
               <button
                 key={id}
-                onClick={() => scrollTo(id)}
+                onClick={() => { scrollTo(id); setMobileNavOpen(false) }}
                 className="hover:text-primary transition-colors"
                 style={{ color: 'inherit' }}
                 onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
@@ -261,6 +262,28 @@ export default function App() {
               </button>
             ))}
           </div>
+          <button
+            type="button"
+            className="mobile-nav-toggle"
+            aria-label="Abrir menu de navegação"
+            aria-expanded={mobileNavOpen}
+            onClick={() => setMobileNavOpen(open => !open)}
+          >
+            •••
+          </button>
+          {mobileNavOpen && (
+            <div className="mobile-nav-menu" style={{ fontFamily: 'var(--font-mono)' }}>
+              {['sobre', 'skills', 'formacao', 'contato'].map(id => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => { scrollTo(id); setMobileNavOpen(false) }}
+                >
+                  /{id}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </nav>
 
