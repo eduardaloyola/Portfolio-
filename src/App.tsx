@@ -240,14 +240,14 @@ export default function App() {
           borderBottom: scrolled ? '1px solid var(--color-border)' : 'none',
         }}
       >
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="site-nav-inner max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <span
             className="font-mono text-sm"
             style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-mono)' }}
           >
             {'>'} eduarda.dev<span className="cursor-blink">_</span>
           </span>
-          <div className="flex gap-6 text-xs" style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted-foreground)' }}>
+          <div className="site-nav-links flex gap-6 text-xs" style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-muted-foreground)' }}>
             {['sobre', 'skills', 'formacao', 'contato'].map(id => (
               <button
                 key={id}
@@ -284,8 +284,8 @@ export default function App() {
           }}
         />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-32">
-          <div className="mb-4 flex items-center gap-3">
+        <div className="hero-content relative z-10 max-w-5xl mx-auto px-6 py-32">
+          <div className="hero-status mb-4 flex items-center gap-3">
             <span style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-mono)', fontSize: '12px' }}>
               [PLAYER_1] ·
             </span>
@@ -340,7 +340,7 @@ export default function App() {
           </div>
 
           {/* Stat row */}
-          <div className="mt-16 flex gap-8 flex-wrap">
+          <div className="hero-stats mt-16 flex gap-8 flex-wrap">
             {[
               { label: 'LVL', value: '02', sub: 'anos codando' },
               { label: 'LANG', value: '10+', sub: 'tecnologias' },
