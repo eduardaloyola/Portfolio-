@@ -308,12 +308,17 @@ export default function App() {
         />
 
         <div className="hero-content relative z-10 max-w-5xl mx-auto px-6 py-32">
-          <div className="hero-status mb-4 flex items-center gap-3">
-            <span style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-mono)', fontSize: '12px' }}>
-              [PLAYER_1] ·
-            </span>
-            <span style={{ color: 'var(--color-muted-foreground)', fontFamily: 'var(--font-mono)', fontSize: '12px' }}>
+          <div className="hero-status mb-4">
+            <span style={{ color: 'var(--color-muted-foreground)', fontFamily: 'var(--font-mono)', fontSize: '14px' }}>
               Salvador, BA · ~2 anos em campo
+              <svg className="game-icon" viewBox="0 0 48 30" style={{ color: 'var(--color-primary)' }} aria-hidden="true">
+                <path d="M12 5h24c4.2 0 6.7 3.4 8.2 10.2 1.1 5.1.6 9.4-2.2 10.4-2.8 1-5.1-3.1-7.4-7.1H13.4c-2.3 4-4.6 8.1-7.4 7.1-2.8-1-3.3-5.3-2.2-10.4C5.3 8.4 7.8 5 12 5Z" fill="currentColor" />
+                <path d="M12 10v8M8 14h8" stroke="var(--color-background)" strokeWidth="2" strokeLinecap="round" />
+                <circle cx="33" cy="11.5" r="1.6" fill="var(--color-background)" />
+                <circle cx="37" cy="15.5" r="1.6" fill="var(--color-background)" />
+                <circle cx="29" cy="15.5" r="1.6" fill="var(--color-background)" />
+                <circle cx="33" cy="19.5" r="1.6" fill="var(--color-background)" />
+              </svg>
             </span>
           </div>
 
