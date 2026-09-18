@@ -515,7 +515,7 @@ export default function App() {
             />
             <div className="ml-4">
               <p style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.15em', marginBottom: '10px' }}>
-                // PROJETO_DESTAQUE
+                // PROJETO
               </p>
               <h3 className="font-display mb-3" style={{ fontSize: '1.3rem', fontWeight: 400 }}>
                 Site Coletivo HerData
@@ -547,6 +547,52 @@ export default function App() {
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)', fontSize: '13px', textDecoration: 'underline', textUnderlineOffset: '4px' }}
               >
                 eduardaloyola.github.io/Site-para-coletivo-HerData/ ↗
+              </a>
+            </div>
+          </div>
+
+          <div
+            className="mt-4 p-8 relative overflow-hidden"
+            style={{ backgroundColor: 'var(--color-card)', border: '1px solid var(--color-border)' }}
+          >
+            <div
+              className="absolute top-0 left-0 w-1 h-full"
+              style={{ backgroundColor: 'var(--color-accent)' }}
+            />
+            <div className="ml-4">
+              <p style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.15em', marginBottom: '10px' }}>
+                // PROJETO
+              </p>
+              <h3 className="font-display mb-3" style={{ fontSize: '1.3rem', fontWeight: 400 }}>
+                Guia Cidadão
+              </h3>
+              <p style={{ color: 'var(--color-muted-foreground)', lineHeight: '1.75', fontSize: '0.93rem', maxWidth: '560px', marginBottom: '16px' }}>
+                Assistente web que responde dúvidas sobre MEI, direitos do consumidor e documentos básicos no Brasil, usando RAG (Retrieval-Augmented Generation) com a API gratuita do Google Gemini. Projeto de estudo para demonstrar embeddings, busca semântica e prompt engineering aplicados a um caso real.
+              </p>
+              <div className="flex gap-2 flex-wrap mb-6">
+                {['Python', 'Streamlit', 'Google Gen AI SDK', 'NumPy'].map(t => (
+                  <span
+                    key={t}
+                    style={{
+                      backgroundColor: 'rgba(184,224,74,0.1)',
+                      color: 'var(--color-accent)',
+                      border: '1px solid rgba(184,224,74,0.2)',
+                      padding: '3px 10px',
+                      fontSize: '11px',
+                      fontFamily: 'var(--font-mono)',
+                    }}
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <a
+                href="https://guia-cidadao.streamlit.app/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)', fontSize: '13px', textDecoration: 'underline', textUnderlineOffset: '4px' }}
+              >
+                guia-cidadao.streamlit.app ↗
               </a>
             </div>
           </div>
