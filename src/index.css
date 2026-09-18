@@ -47,6 +47,11 @@ body {
 }
 .cursor-blink { animation: blink 1.1s step-end infinite; }
 
+.mobile-nav-toggle,
+.mobile-nav-menu {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .site-nav-inner {
     position: relative;
@@ -130,11 +135,6 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem 2rem;
   }
-}
-
-.mobile-nav-toggle,
-.mobile-nav-menu {
-  display: none;
 }
 
 @keyframes float {
