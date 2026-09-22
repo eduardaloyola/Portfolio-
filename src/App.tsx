@@ -196,7 +196,7 @@ export default function App() {
     const audio = natureAudioRef.current
     if (!audio) return
 
-    audio.volume = 0.04
+    audio.volume = 0.7
 
     if (natureSoundOn) {
       audio.play().catch(() => setNatureSoundOn(false))
