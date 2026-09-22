@@ -196,6 +196,8 @@ export default function App() {
     const audio = natureAudioRef.current
     if (!audio) return
 
+    audio.volume = 0.04
+
     if (natureSoundOn) {
       audio.play().catch(() => setNatureSoundOn(false))
     } else {
@@ -230,7 +232,7 @@ export default function App() {
   return (
     <div style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', minHeight: '100vh' }}>
 
-      <audio ref={natureAudioRef} src={natureSoundUrl} autoPlay loop preload="auto" volume={0.15} />
+      <audio ref={natureAudioRef} src={natureSoundUrl} autoPlay loop preload="auto" />
 
       {/* NAV */}
       <nav
@@ -732,7 +734,7 @@ export default function App() {
               <em style={{ color: 'var(--color-primary)' }}>algo legal?</em>
             </h2>
             <p style={{ color: 'var(--color-muted-foreground)', lineHeight: '1.8', marginBottom: '28px' }}>
-              Aberta a oportunidades, freelas, colaborações e boas conversas sobre código, games e natureza.
+              Aberta a oportunidades, freelas, colaborações e boas conversas sobre código.
             </p>
 
             <div className="space-y-3">
