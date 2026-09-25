@@ -7,7 +7,7 @@ const skillGroups = [
     icon: '◈',
     color: '#7CB842',
     skills: [
-      { name: 'React', level: 90 },
+      { name: 'React', level: 75 },
       { name: 'TypeScript', level: 85 },
       { name: 'JavaScript', level: 88 },
       { name: 'Tailwind CSS', level: 88 },
@@ -30,6 +30,18 @@ const skillGroups = [
     ],
   },
   {
+    id: 'data',
+    label: 'Dados',
+    icon: '◫',
+    color: '#B8E04A',
+    skills: [
+      { name: 'SQL Server', level: 75 },
+      { name: 'NumPy', level: 70 },
+      { name: 'Pandas', level: 70 },
+      { name: 'Power BI', level: 75 },
+    ],
+  },
+  {
     id: 'tools',
     label: 'Ferramentas',
     icon: '◧',
@@ -38,7 +50,6 @@ const skillGroups = [
       { name: 'Git / GitHub', level: 85 },
       { name: 'GitLab', level: 78 },
       { name: 'Docker', level: 55 },
-      { name: 'Power BI', level: 70 },
       { name: 'N8N', level: 65 },
       { name: '.NET', level: 55 },
     ],
@@ -196,7 +207,7 @@ export default function App() {
     const audio = natureAudioRef.current
     if (!audio) return
 
-    audio.volume = 0.7
+    audio.volume = 0.5
 
     if (natureSoundOn) {
       audio.play().catch(() => setNatureSoundOn(false))
@@ -341,8 +352,8 @@ export default function App() {
             className="max-w-lg mb-10 leading-relaxed"
             style={{ color: 'var(--color-muted-foreground)', fontSize: '1rem', lineHeight: '1.8' }}
           >
-            Desenvolvedora full stack graduanda em Ciência e Tecnologia pela UFBA.
-            Construtora de interfaces, scripts e sistemas — com ~2 anos de código na mochila.
+            Desenvolvedora full stack com atuação em dados, graduanda em Ciência e Tecnologia pela UFBA.
+            Construtora de interfaces, sistemas e análises — com ~2 anos de código na mochila.
             Fora da tela: natureza e games. 
           </p>
 
