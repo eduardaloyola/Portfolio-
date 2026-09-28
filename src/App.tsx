@@ -480,7 +480,7 @@ export default function App() {
                 <div>▸ games & worldbuilding</div>
               </div>
               <div style={{ color: 'var(--color-primary)', marginTop: '16px', marginBottom: '8px' }}>
-                $ echo $LOCALIZAÇÃO 
+                $ echo $LOCATION
               </div>
               <div style={{ color: 'var(--color-foreground)' }}>
                 Salvador, BA — Brasil
