@@ -22,6 +22,7 @@ const skillGroups = [
     icon: '◉',
     color: '#B8E04A',
     skills: [
+      { name: 'Java', level: 65 },
       { name: 'Node.js', level: 78 },
       { name: 'Python', level: 80 },
       { name: 'C#', level: 60 },
@@ -36,9 +37,28 @@ const skillGroups = [
     color: '#B8E04A',
     skills: [
       { name: 'SQL Server', level: 75 },
+      { name: 'Análise de Dados', level: 75 },
+      { name: 'Estatística Descritiva', level: 65 },
       { name: 'NumPy', level: 70 },
       { name: 'Pandas', level: 70 },
+      { name: 'OpenPyXL', level: 70 },
+      { name: 'EasyOCR', level: 65 },
       { name: 'Power BI', level: 75 },
+      { name: 'Dashboards e Relatórios', level: 75 },
+      { name: 'Excel', level: 75 },
+    ],
+  },
+  {
+    id: 'ai',
+    label: 'IA',
+    icon: '◉',
+    color: '#B8E04A',
+    skills: [
+      { name: 'RAG', level: 70 },
+      { name: 'Google Gemini API', level: 70 },
+      { name: 'Streamlit', level: 75 },
+      { name: 'Claude', level: 65 },
+      { name: 'Copilot', level: 70 },
     ],
   },
   {
@@ -49,9 +69,12 @@ const skillGroups = [
     skills: [
       { name: 'Git / GitHub', level: 85 },
       { name: 'GitLab', level: 78 },
+      { name: 'GitHub Pages', level: 80 },
       { name: 'Docker', level: 55 },
       { name: 'N8N', level: 65 },
       { name: '.NET', level: 55 },
+      { name: 'Visual Studio', level: 65 },
+      { name: 'TOTVS Protheus', level: 60 },
     ],
   },
 ]
@@ -59,38 +82,38 @@ const skillGroups = [
 const experiences = [
   {
     role: 'Estagiária de Governança de TI',
-    company: 'FIEB',
+    company: 'Federação das Indústrias do Estado da Bahia (FIEB)',
     period: 'Ago 2025 – Ago 2026',
-    tags: ['Python', 'Power BI', 'N8N', 'TOTVS Protheus'],
-    desc: 'Automação de dados com Python e N8N, dashboards no Power BI, mapeamento de processos e controle de contratos de TI.',
+    tags: ['Python', 'EasyOCR', 'OpenPyXL', 'TOTVS Protheus', 'Governança de TI', 'Power BI', 'N8N', 'Gestão de Processos'],
+    desc: 'Atuação estratégica na estruturação, mapeamento e padronização de processos tecnológicos internos. Controle de contratos corporativos e fluxos de compras de soluções tecnológicas para sistemas e suporte técnico; interface com a gestão de tecnologia para levantamento de requisitos, análise de demandas e alinhamento de entregas. Desenvolvimento de scripts Python com EasyOCR e OpenPyXL para automação de processos de dados, integração com N8N, geração de relatórios automatizados e dashboards no Power BI.',
     temp: false,
   },
   {
-    role: 'Estagiária de Sistemas',
-    company: 'FIEB',
+    role: 'Estagiária de Sistemas (Atuação Temporária)',
+    company: 'Federação das Indústrias do Estado da Bahia (FIEB)',
     period: 'Jun – Jul 2026',
-    tags: ['JavaScript', 'React', 'Node.js', 'C#', 'PHP'],
-    desc: 'Desenvolvimento e manutenção de sistemas internos. Versionamento em equipe com Git, GitHub e GitLab.',
+    tags: ['JavaScript', 'Node.js', 'React', 'C#', 'PHP', 'Python', 'Git', 'GitHub', 'GitLab', 'SQL Server', 'Manutenção de Sistemas'],
+    desc: 'Atuação temporária na área de Sistemas, na manutenção de sistemas internos usando JavaScript, Node.js, React, C# e PHP. Uso de Git, GitHub e GitLab para versionamento e controle de código em equipe.',
     temp: true,
   },
   {
-    role: 'Integrante de Extensão',
-    company: 'Herdata — UFBA',
+    role: 'Integrante do HerData – Coletivo de Ciência de Dados',
+    company: 'HerData (UFBA)',
     period: 'Out 2025 – Presente',
-    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'SQL', 'Python'],
-    desc: 'Site oficial do coletivo, pesquisas científicas e análise de dados com impacto comunitário.',
+    tags: ['Análise de Dados', 'Estatística Descritiva', 'SQL', 'SQL Server', 'React', 'TypeScript', 'GitHub Pages', 'Gestão de Projetos Tecnológicos'],
+    desc: 'Participação em formação interna de análise de dados e estatística descritiva, com prática na interpretação de bases de dados. Desenvolvimento e publicação do site do coletivo via GitHub Pages. Atuação no planejamento, gerenciamento e execução de projetos tecnológicos com impacto externo ao ecossistema acadêmico.',
     temp: false,
   },
 ]
 
 const certs = [
-  { title: 'Python do Básico ao Avançado', source: 'Udemy', year: '2025' },
-  { title: 'Lógica de Programação e Estrutura de Dados', source: 'UFBA / IC', year: '2024' },
-  { title: 'Santander Coders 2024', source: 'ADA Tech', year: '2024' },
+  { title: 'Java Completo', source: 'Udemy', year: 'Junho de 2025' },
+  { title: 'Lógica de Programação e Estrutura de Dados', source: 'Instituto de Computação | UFBA', year: 'Agosto de 2024' },
+  { title: 'Santander Coders 2024', source: 'ADA', year: 'Junho de 2024' },
 ]
 
 const education = {
-  course: 'Ciência e Tecnologia',
+  course: 'Bacharelado em Ciência e Tecnologia',
   institution: 'Universidade Federal da Bahia (UFBA)',
   period: '2023 – Presente',
   subjects: ['Hardware', 'Software', 'Lógica de Programação', 'Programação Orientada a Objetos', 'Sistemas Operacionais'],
@@ -441,7 +464,7 @@ export default function App() {
               }}
             >
               <div style={{ color: 'var(--color-primary)', marginBottom: '8px' }}>
-                $ whoami
+                $ quemsoueu
               </div>
               <div style={{ color: 'var(--color-foreground)', marginBottom: '16px' }}>
                 Eduarda Loyola
@@ -457,7 +480,7 @@ export default function App() {
                 <div>▸ games & worldbuilding</div>
               </div>
               <div style={{ color: 'var(--color-primary)', marginTop: '16px', marginBottom: '8px' }}>
-                $ echo $LOCATION
+                $ echo $LOCALIZAÇÃO 
               </div>
               <div style={{ color: 'var(--color-foreground)' }}>
                 Salvador, BA — Brasil
@@ -619,7 +642,7 @@ export default function App() {
               {experiences.map((exp, i) => (
                 <div
                   key={i}
-                  className="grid md:grid-cols-[180px_1fr] gap-6 py-6"
+                  className="grid md:grid-cols-[180px_minmax(0,1fr)] gap-6 py-6"
                   style={{ borderBottom: '1px solid var(--color-border)' }}
                 >
                   <div>
@@ -628,7 +651,7 @@ export default function App() {
                     </div>
                     <div style={{ color: 'var(--color-muted-foreground)', fontSize: '0.85rem' }}>{exp.company}</div>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="font-display" style={{ fontSize: '1.1rem', fontWeight: 400, color: 'var(--color-foreground)' }}>
                         {exp.role}
@@ -672,7 +695,7 @@ export default function App() {
                 // FORMAÇÃO.acadêmica
               </p>
               <div
-                className="grid md:grid-cols-[180px_1fr] gap-6 py-6"
+                className="grid md:grid-cols-[180px_minmax(0,1fr)] gap-6 py-6"
                 style={{ borderBottom: '1px solid var(--color-border)' }}
               >
                 <div>
@@ -681,7 +704,7 @@ export default function App() {
                   </div>
                   <div style={{ color: 'var(--color-muted-foreground)', fontSize: '0.85rem' }}>{education.institution}</div>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="font-display mb-2" style={{ fontSize: '1.1rem', fontWeight: 400, color: 'var(--color-foreground)' }}>
                     {education.course}
                   </div>
@@ -719,9 +742,9 @@ export default function App() {
                   className="p-5"
                   style={{ backgroundColor: 'var(--color-card)', border: '1px solid var(--color-border)' }}
                 >
-                  <div style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)', fontSize: '10px', marginBottom: '8px' }}>{c.year}</div>
+                  {c.year && <div style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)', fontSize: '10px', marginBottom: '8px' }}>{c.year}</div>}
                   <div style={{ color: 'var(--color-foreground)', fontSize: '0.88rem', lineHeight: '1.5', marginBottom: '6px' }}>{c.title}</div>
-                  <div style={{ color: 'var(--color-muted-foreground)', fontFamily: 'var(--font-mono)', fontSize: '11px' }}>{c.source}</div>
+                  {c.source && <div style={{ color: 'var(--color-muted-foreground)', fontFamily: 'var(--font-mono)', fontSize: '11px' }}>{c.source}</div>}
                 </div>
               ))}
             </div>
@@ -768,7 +791,8 @@ export default function App() {
                       href={href}
                       target={href.startsWith('http') ? '_blank' : undefined}
                       rel="noreferrer"
-                      style={{ color: 'var(--color-foreground)', fontSize: '0.9rem', textDecoration: 'underline', textUnderlineOffset: '4px' }}
+                      className="min-w-0"
+                      style={{ color: 'var(--color-foreground)', fontSize: '0.9rem', textDecoration: 'underline', textUnderlineOffset: '4px', overflowWrap: 'anywhere' }}
                       onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-accent)')}
                       onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-foreground)')}
                     >
